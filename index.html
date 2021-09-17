@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Renolit</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <a href="#" onclick="window.open(getParameter('clickTag'), '_blank'); return false">
+    <div class="wrapper">
+      <!-- slide-1 -->
+      <div id="scene1" class="mySlides first">
+        <img src="img/scene-1.png" alt="first text" id="txt1">
+        <div class="txtBg"></div>
+        <img src="img/desktop.png" alt="woman" class="womanBg">
+      </div>
+      <!-- slide-2 -->
+      <div id="scene2" class="mySlides second">
+        <img src="img/scene-2.png" alt="second text" id="txt2">
+        <div class="txtBg"></div>
+        <img src="img/desktop.png" alt="woman">
+      </div>
+      <!-- slide-3 -->
+      <div id="scene3" class="mySlides third">
+        <div class="btn"></div>
+        <div class="txtBg"></div>
+        <img src="img/desktop.png" alt="woman" class="womanBg2">
+      </div>
+      <!-- allg -->
+      <div class="logo"></div>
+    </div>
+  </a>
+
+  <script src="js/main.js"></script>
+  <script>
+    function getParameter(name)
+      {
+      var query = window.location.search.substring(1);
+      var vars = query.split("&");
+      for (var i=0;i<vars.length;i++)
+      {
+        var itm = vars[i].split("=");
+        if(itm[0] == name){return decodeURIComponent(itm[1]);}
+      }
+      return '';
+      }
+  </script>
+</body>
+</html>
